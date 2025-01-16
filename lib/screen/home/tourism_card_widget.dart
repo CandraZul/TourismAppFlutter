@@ -46,9 +46,7 @@ class TourismCard extends StatelessWidget {
                children: [
                  Text(
                    tourism.name,
-                   style: const TextStyle(
-                     fontSize: 16,
-                   ),
+                   style: Theme.of(context).textTheme.titleMedium,
                  ),
                  const SizedBox.square(dimension: 6),
                  Row(
@@ -60,6 +58,7 @@ class TourismCard extends StatelessWidget {
                          tourism.address,
                          overflow: TextOverflow.ellipsis,
                          maxLines: 1,
+                         style: Theme.of(context).textTheme.bodyMedium,
                        ),
                      ),
                    ],
@@ -75,6 +74,7 @@ class TourismCard extends StatelessWidget {
                      Expanded(
                        child: Text(
                          tourism.like.toString(),
+                         style: Theme.of(context).textTheme.bodyMedium,
                        ),
                      ),
                    ],
